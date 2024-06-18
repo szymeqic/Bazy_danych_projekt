@@ -25,7 +25,7 @@ NIP_klienta VARCHAR(15),
 nazwa_klienta VARCHAR(45));
 
 CREATE TABLE adresy_klientow(
-klienci_nr_klienta VARCHAR(15) REFERENCES klienci ON UPDATE RESTRICT ON DELETE RESTRICT,
+klienci_nr_klienta INT REFERENCES klienci ON UPDATE RESTRICT ON DELETE RESTRICT,
 adresy_id_adresu INT REFERENCES adresy ON UPDATE RESTRICT ON DELETE RESTRICT,
 status VARCHAR(25));
 
