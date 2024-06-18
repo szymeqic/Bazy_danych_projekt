@@ -26,7 +26,7 @@ namespace Bazy
 		{
 			Form1 okno = new Form1(this.textBox1.Text, this.textBox2.Text, this);
 			okno.Show();
-			this.Hide();
+		//	this.Hide();
 		}
 	}
 }

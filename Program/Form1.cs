@@ -1,5 +1,6 @@
 using Npgsql;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Runtime.CompilerServices;
 namespace Bazy
 
@@ -12,6 +13,7 @@ namespace Bazy
 			this.login = login;
 			this.password = password;
 			this.parent = parent;
+			
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace Bazy
 			//}
 			if (connected)
 			{
+				this.parent.Hide();
 				NpgsqlCommand command = new NpgsqlCommand();
 				command.Connection = connection;
 				command.CommandType = System.Data.CommandType.Text;
@@ -46,7 +49,7 @@ namespace Bazy
 				command.Dispose();
 				connection.Close();
 			}
-			else
+			else 
 			{
 				this.Close();
 			}

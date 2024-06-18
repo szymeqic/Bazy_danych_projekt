@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "U6b1Cb5WbaK1qa1VI/kxanbLz0z6bUDe0OAMLrhsIFfx1RjOQ0iMwVdkTXLzR+gmh0pV+xVOuEWxEUpPteUozw==",
+  "dgSpecHash": "j4rwn0GLl0LLezDE87zp2/7iWDUCAjwTx7Cub4gJtjDE7UPBjSd+8OLsfJkF7+ICFFJpS2qA47wJxXQhGs1ygA==",
   "success": true,
-  "projectFilePath": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Bazy.csproj",
+  "projectFilePath": "E:\\studia\\bazy_danych\\Bazy_danych_projekt\\Program\\Bazy.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\sicia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\sicia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\sicia\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }
