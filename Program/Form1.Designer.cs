@@ -11,6 +11,7 @@ namespace Bazy
 		private System.ComponentModel.IContainer components = null;
 		public string login;
 		public string password;
+		public Form2 parent;
 
 		/// <summary>
 		///  Clean up any resources being used.
@@ -53,6 +54,8 @@ namespace Bazy
 			Controls.Add(dataGridView1);
 			Name = "Form1";
 			Text = "Form1";
+			FormClosing += ng;
+			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 		}

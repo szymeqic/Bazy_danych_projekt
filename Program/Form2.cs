@@ -24,7 +24,9 @@ namespace Bazy
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
+			Form1 okno = new Form1(this.textBox1.Text, this.textBox2.Text, this);
+			okno.Show();
+			this.Hide();
 		}
 	}
 }
