@@ -9,11 +9,11 @@ NIP_klienta VARCHAR(15),
 nazwa_klienta VARCHAR(45));
 
 CREATE TABLE faktury(
-nr_faktury varchar(20) PRIMARY KEY,
+nr_faktury int PRIMARY KEY,
 data_wystawienia date,
 cena_razem_bez_podatku DECIMAL(9,2),
 podatek DECIMAL(4,2),
-cena_razem DECIMAL(9,2)
+cena_razem DECIMAL(9,2),
 klienci_nr_klienta INT);
 
 CREATE TABLE adresy(
@@ -25,8 +25,8 @@ kod_pocztowy VARCHAR(6),
 miasto VARCHAR(30));
 
 CREATE TABLE faktura_towary(
-nr_faktury VARCHAR(20) REFERENCES faktury ON DELETE RESTRICT ON UPDATE RESTRICT,
-id_towaru INT FOREIGN KEY REFERENCES towary ON DELETE RESTRICT ON UPDATE RESTRICT,
+nr_faktury int REFERENCES faktury ON DELETE RESTRICT ON UPDATE RESTRICT,
+id_towaru INT REFERENCES towary ON DELETE RESTRICT ON UPDATE RESTRICT,
 opis_towaru VARCHAR(85),
 cena_towaru DECIMAL(9,2),
 ilosc_towaru INT,
