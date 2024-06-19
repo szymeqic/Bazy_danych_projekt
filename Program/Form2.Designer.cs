@@ -90,6 +90,7 @@
 			Controls.Add(label1);
 			Controls.Add(textBox1);
 			Name = "Form2";
+			StartPosition = FormStartPosition.CenterScreen;
 			Text = "BETONOPOLEX Logowanie";
 			ResumeLayout(false);
 			PerformLayout();

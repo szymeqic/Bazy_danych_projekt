@@ -191,27 +191,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
-    "C:\\Users\\user\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
-    "E:\\visual studio\\NuGetPackages": {}
+    "C:\\Users\\sicia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\studia\\bazy_danych\\Bazy_danych_projekt\\Program\\Bazy.csproj",
+      "projectUniqueName": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Bazy.csproj",
       "projectName": "Bazy",
-      "projectPath": "E:\\studia\\bazy_danych\\Bazy_danych_projekt\\Program\\Bazy.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\studia\\bazy_danych\\Bazy_danych_projekt\\Program\\obj\\",
+      "projectPath": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Bazy.csproj",
+      "packagesPath": "C:\\Users\\sicia\\.nuget\\packages\\",
+      "outputPath": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Users\\user\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-        "E:\\visual studio\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\sicia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
