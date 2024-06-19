@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|d:\\dokumenty\\github\\bazy_danych_projekt\\program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|d:\\dokumenty\\github\\bazy_danych_projekt\\program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\bazy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -25,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CE1218E-C8C5-4845-951C-D3072EDAC001}|Bazy.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,25 +42,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T15:11:17.581Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Form2.cs",
               "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAADAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:25:29.543Z",
               "EditorCaption": ""
@@ -96,13 +80,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T12:59:49.724Z",
               "EditorCaption": ""
@@ -110,27 +94,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T14:27:41.736Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAMwDQAAABHAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T14:01:26.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "D:\\Dokumenty\\GitHub\\Bazy_danych_projekt\\Program\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T12:58:49.47Z",
               "EditorCaption": ""
             }
           ]
