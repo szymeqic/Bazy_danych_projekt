@@ -35,3 +35,9 @@ klienci_nr_klienta INT REFERENCES klienci ON UPDATE RESTRICT ON DELETE RESTRICT,
 adresy_id_adresu INT REFERENCES adresy ON UPDATE RESTRICT ON DELETE RESTRICT,
 status VARCHAR(25));
 
+CREATE FUNCTION oblicz_brutto1() RETURNS TRIGGER AS $oblicz_brutto$ BEGIN UPDATE faktury SET cena_razem =
+podatek+cena_razem_bez_podatku; RETURN NEW; END; $oblicz_brutto$ LANGUAGE plpgsql;
+
+CREATE TRIGGER obliczanie_brutto AFTER INSERT ON faktury FOR EACH ROW EXECUTE FUNCTION oblicz_brutto1();
+
+CREATE TRIGGER obliczanie_brutto1 AFTER UPDATE OF cena_razem_bez_podatku, podatek ON faktury FOR EACH ROW EXECUTE FUNCTION oblicz_brutto1();
