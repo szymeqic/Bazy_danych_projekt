@@ -12,6 +12,7 @@ using System.Security.AccessControl;
 using System.Windows.Forms;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Globalization;
 namespace Bazy
 //			W ramach projektu oczekujê od zespo³ów bazy danych min 5 tabel z dwoma relacjami wiele do wielu oraz interfejs.
 
@@ -82,6 +83,17 @@ namespace Bazy
 					this.command.CommandText = "select id_adresu as \"ID\", ulica as \"Ulica\", nr_domu as \"Nr domu\", nr_lokalu as \"Nr lokalu\", kod_pocztowy as \"Kod pocztowy\", miasto as \"Miasto\" from " + table;
 					break;
 
+				case "faktura_towary":
+					this.command.Connection = connection;
+					this.command.CommandType = System.Data.CommandType.Text;
+					this.command.CommandText = "select id_faktury as \"ID faktury\", id_towaru as \"ID towaru\", ilosc_towaru as \"Iloœæ towaru\", cena_laczna_towaru as \"£¹czna cena towaru\" from " + table;
+					break;
+
+				case "adresy_klientow":
+					this.command.Connection = connection;
+					this.command.CommandType = System.Data.CommandType.Text;
+					this.command.CommandText = "select klienci_nr_klienta as \"Numer klienta\", adresy_id_adresu as \"ID adresu\", status as \"Status\" from " + table;
+					break;
 				default:
 					break;
 			}
@@ -118,6 +130,12 @@ namespace Bazy
 				this.nip_klienta = textBox4.Text;
 				this.command.CommandType = System.Data.CommandType.Text;
 				this.command.CommandText = $"INSERT INTO klienci (NIP_klienta, nazwa_klienta) VALUES ('{this.nip_klienta}', '{this.nazwa_klienta}')";
+				command.ExecuteNonQuery();
+				this.command.CommandText = $"SELECT MAX (nr_klienta) FROM klienci";
+				command.Parameters.Add(new NpgsqlParameter("p_out", DbType.String) { Direction = ParameterDirection.Output });
+				command.ExecuteNonQuery();
+				string temp = Convert.ToString(command.Parameters[0].Value);
+				this.command.CommandText = $"INSERT INTO adresy_klientow (klienci_nr_klienta) VALUES ({temp})";
 				command.ExecuteNonQuery();
 			}
 			catch (Exception exc)
@@ -237,6 +255,13 @@ namespace Bazy
 				this.command.CommandType = System.Data.CommandType.Text;
 				this.command.CommandText = $"INSERT INTO faktury (data_wystawienia, cena_razem_bez_podatku, podatek, klienci_nr_klienta) VALUES ('{dateTimePicker1.Value.ToString("yyyy-MM-dd")}', {textBox16.Text}, {textBox17.Text}, {textBox18.Text})";
 				command.ExecuteNonQuery();
+				this.command.CommandText = $"SELECT MAX (id_faktury) FROM faktury";
+				command.Parameters.Add(new NpgsqlParameter("p_out", DbType.String) { Direction = ParameterDirection.Output });
+				command.ExecuteNonQuery();
+				string temp = Convert.ToString(command.Parameters[0].Value);
+				MessageBox.Show(temp);
+				command.CommandText = $"INSERT INTO faktura_towary (id_faktury) VALUES ({temp})";
+				command.ExecuteNonQuery();
 			}
 			catch (Exception exc)
 			{
@@ -324,6 +349,8 @@ namespace Bazy
 				update_table(dataGridView2, "klienci");
 				update_table(dataGridView3, "faktury");
 				update_table(dataGridView4, "adresy");
+				update_table(dataGridView5, "faktura_towary");
+				update_table(dataGridView6, "adresy_klientow");
 			}
 			else
 			{
@@ -466,6 +493,53 @@ namespace Bazy
 				delete_adresy();
 				update_table(dataGridView4, "adresy");
 			}
+		}
+
+		private void button10_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				NumberFormatInfo nfi = new NumberFormatInfo();
+				nfi.NumberDecimalSeparator = ".";
+				this.command.CommandText = $"UPDATE faktura_towary SET id_towaru = {textBox26.Text}, ilosc_towaru = {textBox27.Text} WHERE id_faktury = {textBox25.Text}";
+				command.ExecuteNonQuery();
+				this.command.CommandText = $"SELECT cena_towaru FROM towary WHERE id_towaru = {textBox26.Text}";
+				command.Parameters.Add(new NpgsqlParameter("p_out", DbType.String) { Direction = ParameterDirection.Output });
+				command.ExecuteNonQuery();
+				var cena = command.Parameters[0].Value;
+				command.CommandText = $"UPDATE faktura_towary SET cena_laczna_towaru = {(Convert.ToDouble(cena) * Convert.ToInt64(textBox27.Text)).ToString(nfi)} WHERE id_faktury = {textBox25.Text}";
+				command.ExecuteNonQuery();
+				update_table(dataGridView5, "faktura_towary");
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+
+		}
+
+		private void button11_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				this.command.CommandText = $"UPDATE adresy_klientow SET adresy_id_adresu = {textBox29.Text}, status = '{textBox30.Text}' WHERE klienci_nr_klienta = {textBox28.Text}";
+				command.ExecuteNonQuery();
+				update_table(dataGridView6, "adresy_klientow");
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		private void button12_Click(object sender, EventArgs e)
+		{
+			update_table(dataGridView6, "adresy_klientow");
+		}
+
+		private void button13_Click(object sender, EventArgs e)
+		{
+			update_table(dataGridView5, "faktura_towary");
 		}
 	}
 }

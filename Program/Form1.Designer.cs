@@ -110,7 +110,24 @@ namespace Bazy
 			dateTimePicker1 = new DateTimePicker();
 			dataGridView3 = new DataGridView();
 			tabPage4 = new TabPage();
+			groupBox11 = new GroupBox();
+			label25 = new Label();
+			textBox24 = new TextBox();
+			radioButton16 = new RadioButton();
+			radioButton15 = new RadioButton();
+			radioButton14 = new RadioButton();
 			groupBox10 = new GroupBox();
+			button9 = new Button();
+			label24 = new Label();
+			textBox23 = new TextBox();
+			textBox22 = new TextBox();
+			label23 = new Label();
+			textBox21 = new TextBox();
+			label22 = new Label();
+			textBox20 = new TextBox();
+			label21 = new Label();
+			label20 = new Label();
+			textBox19 = new TextBox();
 			dataGridView4 = new DataGridView();
 			tabPage5 = new TabPage();
 			groupBox5 = new GroupBox();
@@ -120,25 +137,30 @@ namespace Bazy
 			label6 = new Label();
 			textBox8 = new TextBox();
 			textBox7 = new TextBox();
+			tabPage6 = new TabPage();
+			groupBox12 = new GroupBox();
+			textBox27 = new TextBox();
+			label28 = new Label();
+			button10 = new Button();
+			textBox26 = new TextBox();
+			textBox25 = new TextBox();
+			label27 = new Label();
+			label26 = new Label();
+			dataGridView5 = new DataGridView();
+			tabPage7 = new TabPage();
+			groupBox13 = new GroupBox();
+			button12 = new Button();
+			textBox30 = new TextBox();
+			label31 = new Label();
+			textBox29 = new TextBox();
+			textBox28 = new TextBox();
+			label30 = new Label();
+			label29 = new Label();
+			button11 = new Button();
+			dataGridView6 = new DataGridView();
 			backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
 			contextMenuStrip1 = new ContextMenuStrip(components);
-			groupBox11 = new GroupBox();
-			radioButton14 = new RadioButton();
-			radioButton15 = new RadioButton();
-			radioButton16 = new RadioButton();
-			textBox19 = new TextBox();
-			label20 = new Label();
-			label21 = new Label();
-			textBox20 = new TextBox();
-			label22 = new Label();
-			textBox21 = new TextBox();
-			label23 = new Label();
-			textBox22 = new TextBox();
-			textBox23 = new TextBox();
-			label24 = new Label();
-			button9 = new Button();
-			textBox24 = new TextBox();
-			label25 = new Label();
+			button13 = new Button();
 			tabControl1.SuspendLayout();
 			tabPage1.SuspendLayout();
 			groupBox6.SuspendLayout();
@@ -155,11 +177,17 @@ namespace Bazy
 			groupBox9.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
 			tabPage4.SuspendLayout();
+			groupBox11.SuspendLayout();
 			groupBox10.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
 			tabPage5.SuspendLayout();
 			groupBox5.SuspendLayout();
-			groupBox11.SuspendLayout();
+			tabPage6.SuspendLayout();
+			groupBox12.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+			tabPage7.SuspendLayout();
+			groupBox13.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
 			SuspendLayout();
 			// 
 			// tabControl1
@@ -169,6 +197,8 @@ namespace Bazy
 			tabControl1.Controls.Add(tabPage3);
 			tabControl1.Controls.Add(tabPage4);
 			tabControl1.Controls.Add(tabPage5);
+			tabControl1.Controls.Add(tabPage6);
+			tabControl1.Controls.Add(tabPage7);
 			tabControl1.Location = new Point(12, 12);
 			tabControl1.Name = "tabControl1";
 			tabControl1.SelectedIndex = 0;
@@ -860,6 +890,69 @@ namespace Bazy
 			tabPage4.Text = "Adresy";
 			tabPage4.UseVisualStyleBackColor = true;
 			// 
+			// groupBox11
+			// 
+			groupBox11.Controls.Add(label25);
+			groupBox11.Controls.Add(textBox24);
+			groupBox11.Controls.Add(radioButton16);
+			groupBox11.Controls.Add(radioButton15);
+			groupBox11.Controls.Add(radioButton14);
+			groupBox11.Location = new Point(501, 291);
+			groupBox11.Name = "groupBox11";
+			groupBox11.Size = new Size(261, 104);
+			groupBox11.TabIndex = 2;
+			groupBox11.TabStop = false;
+			groupBox11.Text = "Akcja";
+			// 
+			// label25
+			// 
+			label25.AutoSize = true;
+			label25.Location = new Point(166, 54);
+			label25.Name = "label25";
+			label25.Size = new Size(18, 15);
+			label25.TabIndex = 4;
+			label25.Text = "ID";
+			// 
+			// textBox24
+			// 
+			textBox24.Location = new Point(166, 72);
+			textBox24.Name = "textBox24";
+			textBox24.Size = new Size(89, 23);
+			textBox24.TabIndex = 3;
+			// 
+			// radioButton16
+			// 
+			radioButton16.AutoSize = true;
+			radioButton16.Location = new Point(7, 72);
+			radioButton16.Name = "radioButton16";
+			radioButton16.Size = new Size(52, 19);
+			radioButton16.TabIndex = 2;
+			radioButton16.TabStop = true;
+			radioButton16.Text = "Usuń";
+			radioButton16.UseVisualStyleBackColor = true;
+			// 
+			// radioButton15
+			// 
+			radioButton15.AutoSize = true;
+			radioButton15.Location = new Point(7, 47);
+			radioButton15.Name = "radioButton15";
+			radioButton15.Size = new Size(58, 19);
+			radioButton15.TabIndex = 1;
+			radioButton15.TabStop = true;
+			radioButton15.Text = "Edytuj";
+			radioButton15.UseVisualStyleBackColor = true;
+			// 
+			// radioButton14
+			// 
+			radioButton14.AutoSize = true;
+			radioButton14.Location = new Point(7, 22);
+			radioButton14.Name = "radioButton14";
+			radioButton14.Size = new Size(56, 19);
+			radioButton14.TabIndex = 0;
+			radioButton14.TabStop = true;
+			radioButton14.Text = "Dodaj";
+			radioButton14.UseVisualStyleBackColor = true;
+			// 
 			// groupBox10
 			// 
 			groupBox10.Controls.Add(button9);
@@ -879,6 +972,96 @@ namespace Bazy
 			groupBox10.TabIndex = 1;
 			groupBox10.TabStop = false;
 			groupBox10.Text = "Wprowadź dane";
+			// 
+			// button9
+			// 
+			button9.Location = new Point(408, 75);
+			button9.Name = "button9";
+			button9.Size = new Size(75, 23);
+			button9.TabIndex = 10;
+			button9.Text = "Zatwierdź";
+			button9.UseVisualStyleBackColor = true;
+			button9.Click += button9_Click;
+			// 
+			// label24
+			// 
+			label24.AutoSize = true;
+			label24.Location = new Point(322, 19);
+			label24.Name = "label24";
+			label24.Size = new Size(43, 15);
+			label24.TabIndex = 9;
+			label24.Text = "Miasto";
+			// 
+			// textBox23
+			// 
+			textBox23.Location = new Point(322, 37);
+			textBox23.Name = "textBox23";
+			textBox23.Size = new Size(161, 23);
+			textBox23.TabIndex = 8;
+			// 
+			// textBox22
+			// 
+			textBox22.Location = new Point(234, 37);
+			textBox22.Name = "textBox22";
+			textBox22.Size = new Size(82, 23);
+			textBox22.TabIndex = 7;
+			// 
+			// label23
+			// 
+			label23.AutoSize = true;
+			label23.Location = new Point(234, 19);
+			label23.Name = "label23";
+			label23.Size = new Size(82, 15);
+			label23.TabIndex = 6;
+			label23.Text = "Kod pocztowy";
+			// 
+			// textBox21
+			// 
+			textBox21.Location = new Point(173, 37);
+			textBox21.Name = "textBox21";
+			textBox21.Size = new Size(55, 23);
+			textBox21.TabIndex = 5;
+			// 
+			// label22
+			// 
+			label22.AutoSize = true;
+			label22.Location = new Point(173, 19);
+			label22.Name = "label22";
+			label22.Size = new Size(55, 15);
+			label22.TabIndex = 4;
+			label22.Text = "Nr lokalu";
+			// 
+			// textBox20
+			// 
+			textBox20.Location = new Point(112, 37);
+			textBox20.Name = "textBox20";
+			textBox20.Size = new Size(55, 23);
+			textBox20.TabIndex = 3;
+			// 
+			// label21
+			// 
+			label21.AutoSize = true;
+			label21.Location = new Point(112, 19);
+			label21.Name = "label21";
+			label21.Size = new Size(55, 15);
+			label21.TabIndex = 2;
+			label21.Text = "Nr domu";
+			// 
+			// label20
+			// 
+			label20.AutoSize = true;
+			label20.Location = new Point(6, 19);
+			label20.Name = "label20";
+			label20.Size = new Size(33, 15);
+			label20.TabIndex = 1;
+			label20.Text = "Ulica";
+			// 
+			// textBox19
+			// 
+			textBox19.Location = new Point(6, 37);
+			textBox19.Name = "textBox19";
+			textBox19.Size = new Size(100, 23);
+			textBox19.TabIndex = 0;
 			// 
 			// dataGridView4
 			// 
@@ -966,163 +1149,220 @@ namespace Bazy
 			textBox7.Size = new Size(100, 23);
 			textBox7.TabIndex = 0;
 			// 
+			// tabPage6
+			// 
+			tabPage6.Controls.Add(groupBox12);
+			tabPage6.Controls.Add(dataGridView5);
+			tabPage6.Location = new Point(4, 24);
+			tabPage6.Name = "tabPage6";
+			tabPage6.Padding = new Padding(3);
+			tabPage6.Size = new Size(768, 398);
+			tabPage6.TabIndex = 5;
+			tabPage6.Text = "Sprzedaż";
+			tabPage6.UseVisualStyleBackColor = true;
+			// 
+			// groupBox12
+			// 
+			groupBox12.Controls.Add(button13);
+			groupBox12.Controls.Add(textBox27);
+			groupBox12.Controls.Add(label28);
+			groupBox12.Controls.Add(button10);
+			groupBox12.Controls.Add(textBox26);
+			groupBox12.Controls.Add(textBox25);
+			groupBox12.Controls.Add(label27);
+			groupBox12.Controls.Add(label26);
+			groupBox12.Location = new Point(6, 314);
+			groupBox12.Name = "groupBox12";
+			groupBox12.Size = new Size(338, 78);
+			groupBox12.TabIndex = 1;
+			groupBox12.TabStop = false;
+			groupBox12.Text = "Dodaj towar";
+			// 
+			// textBox27
+			// 
+			textBox27.Location = new Point(137, 47);
+			textBox27.Name = "textBox27";
+			textBox27.Size = new Size(71, 23);
+			textBox27.TabIndex = 6;
+			// 
+			// label28
+			// 
+			label28.AutoSize = true;
+			label28.Location = new Point(137, 29);
+			label28.Name = "label28";
+			label28.Size = new Size(71, 15);
+			label28.TabIndex = 5;
+			label28.Text = "Ilość towaru";
+			// 
+			// button10
+			// 
+			button10.Location = new Point(257, 47);
+			button10.Name = "button10";
+			button10.Size = new Size(75, 23);
+			button10.TabIndex = 4;
+			button10.Text = "Zatwierdź";
+			button10.UseVisualStyleBackColor = true;
+			button10.Click += button10_Click;
+			// 
+			// textBox26
+			// 
+			textBox26.Location = new Point(72, 47);
+			textBox26.Name = "textBox26";
+			textBox26.Size = new Size(59, 23);
+			textBox26.TabIndex = 3;
+			// 
+			// textBox25
+			// 
+			textBox25.Location = new Point(6, 47);
+			textBox25.Name = "textBox25";
+			textBox25.Size = new Size(60, 23);
+			textBox25.TabIndex = 2;
+			// 
+			// label27
+			// 
+			label27.AutoSize = true;
+			label27.Location = new Point(6, 29);
+			label27.Name = "label27";
+			label27.Size = new Size(60, 15);
+			label27.TabIndex = 1;
+			label27.Text = "ID Faktury";
+			// 
+			// label26
+			// 
+			label26.AutoSize = true;
+			label26.Location = new Point(72, 29);
+			label26.Name = "label26";
+			label26.Size = new Size(59, 15);
+			label26.TabIndex = 0;
+			label26.Text = "ID Towaru";
+			// 
+			// dataGridView5
+			// 
+			dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView5.Location = new Point(6, 6);
+			dataGridView5.Name = "dataGridView5";
+			dataGridView5.Size = new Size(756, 302);
+			dataGridView5.TabIndex = 0;
+			// 
+			// tabPage7
+			// 
+			tabPage7.Controls.Add(groupBox13);
+			tabPage7.Controls.Add(dataGridView6);
+			tabPage7.Location = new Point(4, 24);
+			tabPage7.Name = "tabPage7";
+			tabPage7.Padding = new Padding(3);
+			tabPage7.Size = new Size(768, 398);
+			tabPage7.TabIndex = 6;
+			tabPage7.Text = "Przypisz adres";
+			tabPage7.UseVisualStyleBackColor = true;
+			// 
+			// groupBox13
+			// 
+			groupBox13.Controls.Add(button12);
+			groupBox13.Controls.Add(textBox30);
+			groupBox13.Controls.Add(label31);
+			groupBox13.Controls.Add(textBox29);
+			groupBox13.Controls.Add(textBox28);
+			groupBox13.Controls.Add(label30);
+			groupBox13.Controls.Add(label29);
+			groupBox13.Controls.Add(button11);
+			groupBox13.Location = new Point(6, 304);
+			groupBox13.Name = "groupBox13";
+			groupBox13.Size = new Size(357, 88);
+			groupBox13.TabIndex = 1;
+			groupBox13.TabStop = false;
+			groupBox13.Text = "Przypisz adres";
+			// 
+			// button12
+			// 
+			button12.Location = new Point(277, 22);
+			button12.Name = "button12";
+			button12.Size = new Size(75, 23);
+			button12.TabIndex = 7;
+			button12.Text = "Odśwież";
+			button12.UseVisualStyleBackColor = true;
+			button12.Click += button12_Click;
+			// 
+			// textBox30
+			// 
+			textBox30.Location = new Point(133, 56);
+			textBox30.Name = "textBox30";
+			textBox30.Size = new Size(100, 23);
+			textBox30.TabIndex = 6;
+			// 
+			// label31
+			// 
+			label31.AutoSize = true;
+			label31.Location = new Point(133, 38);
+			label31.Name = "label31";
+			label31.Size = new Size(39, 15);
+			label31.TabIndex = 5;
+			label31.Text = "Status";
+			// 
+			// textBox29
+			// 
+			textBox29.Location = new Point(69, 56);
+			textBox29.Name = "textBox29";
+			textBox29.Size = new Size(58, 23);
+			textBox29.TabIndex = 4;
+			// 
+			// textBox28
+			// 
+			textBox28.Location = new Point(6, 56);
+			textBox28.Name = "textBox28";
+			textBox28.Size = new Size(57, 23);
+			textBox28.TabIndex = 3;
+			// 
+			// label30
+			// 
+			label30.AutoSize = true;
+			label30.Location = new Point(69, 38);
+			label30.Name = "label30";
+			label30.Size = new Size(58, 15);
+			label30.TabIndex = 2;
+			label30.Text = "ID Adresu";
+			// 
+			// label29
+			// 
+			label29.AutoSize = true;
+			label29.Location = new Point(6, 38);
+			label29.Name = "label29";
+			label29.Size = new Size(57, 15);
+			label29.TabIndex = 1;
+			label29.Text = "ID Klienta";
+			// 
+			// button11
+			// 
+			button11.Location = new Point(277, 56);
+			button11.Name = "button11";
+			button11.Size = new Size(75, 23);
+			button11.TabIndex = 0;
+			button11.Text = "Zatwierdź";
+			button11.UseVisualStyleBackColor = true;
+			button11.Click += button11_Click;
+			// 
+			// dataGridView6
+			// 
+			dataGridView6.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridView6.Location = new Point(6, 6);
+			dataGridView6.Name = "dataGridView6";
+			dataGridView6.Size = new Size(756, 292);
+			dataGridView6.TabIndex = 0;
+			// 
 			// contextMenuStrip1
 			// 
 			contextMenuStrip1.Name = "contextMenuStrip1";
 			contextMenuStrip1.Size = new Size(61, 4);
 			// 
-			// groupBox11
+			// button13
 			// 
-			groupBox11.Controls.Add(label25);
-			groupBox11.Controls.Add(textBox24);
-			groupBox11.Controls.Add(radioButton16);
-			groupBox11.Controls.Add(radioButton15);
-			groupBox11.Controls.Add(radioButton14);
-			groupBox11.Location = new Point(501, 291);
-			groupBox11.Name = "groupBox11";
-			groupBox11.Size = new Size(261, 104);
-			groupBox11.TabIndex = 2;
-			groupBox11.TabStop = false;
-			groupBox11.Text = "Akcja";
-			// 
-			// radioButton14
-			// 
-			radioButton14.AutoSize = true;
-			radioButton14.Location = new Point(7, 22);
-			radioButton14.Name = "radioButton14";
-			radioButton14.Size = new Size(56, 19);
-			radioButton14.TabIndex = 0;
-			radioButton14.TabStop = true;
-			radioButton14.Text = "Dodaj";
-			radioButton14.UseVisualStyleBackColor = true;
-			// 
-			// radioButton15
-			// 
-			radioButton15.AutoSize = true;
-			radioButton15.Location = new Point(7, 47);
-			radioButton15.Name = "radioButton15";
-			radioButton15.Size = new Size(58, 19);
-			radioButton15.TabIndex = 1;
-			radioButton15.TabStop = true;
-			radioButton15.Text = "Edytuj";
-			radioButton15.UseVisualStyleBackColor = true;
-			// 
-			// radioButton16
-			// 
-			radioButton16.AutoSize = true;
-			radioButton16.Location = new Point(7, 72);
-			radioButton16.Name = "radioButton16";
-			radioButton16.Size = new Size(52, 19);
-			radioButton16.TabIndex = 2;
-			radioButton16.TabStop = true;
-			radioButton16.Text = "Usuń";
-			radioButton16.UseVisualStyleBackColor = true;
-			// 
-			// textBox19
-			// 
-			textBox19.Location = new Point(6, 37);
-			textBox19.Name = "textBox19";
-			textBox19.Size = new Size(100, 23);
-			textBox19.TabIndex = 0;
-			// 
-			// label20
-			// 
-			label20.AutoSize = true;
-			label20.Location = new Point(6, 19);
-			label20.Name = "label20";
-			label20.Size = new Size(33, 15);
-			label20.TabIndex = 1;
-			label20.Text = "Ulica";
-			// 
-			// label21
-			// 
-			label21.AutoSize = true;
-			label21.Location = new Point(112, 19);
-			label21.Name = "label21";
-			label21.Size = new Size(55, 15);
-			label21.TabIndex = 2;
-			label21.Text = "Nr domu";
-			// 
-			// textBox20
-			// 
-			textBox20.Location = new Point(112, 37);
-			textBox20.Name = "textBox20";
-			textBox20.Size = new Size(55, 23);
-			textBox20.TabIndex = 3;
-			// 
-			// label22
-			// 
-			label22.AutoSize = true;
-			label22.Location = new Point(173, 19);
-			label22.Name = "label22";
-			label22.Size = new Size(55, 15);
-			label22.TabIndex = 4;
-			label22.Text = "Nr lokalu";
-			// 
-			// textBox21
-			// 
-			textBox21.Location = new Point(173, 37);
-			textBox21.Name = "textBox21";
-			textBox21.Size = new Size(55, 23);
-			textBox21.TabIndex = 5;
-			// 
-			// label23
-			// 
-			label23.AutoSize = true;
-			label23.Location = new Point(234, 19);
-			label23.Name = "label23";
-			label23.Size = new Size(82, 15);
-			label23.TabIndex = 6;
-			label23.Text = "Kod pocztowy";
-			// 
-			// textBox22
-			// 
-			textBox22.Location = new Point(234, 37);
-			textBox22.Name = "textBox22";
-			textBox22.Size = new Size(82, 23);
-			textBox22.TabIndex = 7;
-			// 
-			// textBox23
-			// 
-			textBox23.Location = new Point(322, 37);
-			textBox23.Name = "textBox23";
-			textBox23.Size = new Size(161, 23);
-			textBox23.TabIndex = 8;
-			// 
-			// label24
-			// 
-			label24.AutoSize = true;
-			label24.Location = new Point(322, 19);
-			label24.Name = "label24";
-			label24.Size = new Size(43, 15);
-			label24.TabIndex = 9;
-			label24.Text = "Miasto";
-			// 
-			// button9
-			// 
-			button9.Location = new Point(408, 75);
-			button9.Name = "button9";
-			button9.Size = new Size(75, 23);
-			button9.TabIndex = 10;
-			button9.Text = "Zatwierdź";
-			button9.UseVisualStyleBackColor = true;
-			button9.Click += button9_Click;
-			// 
-			// textBox24
-			// 
-			textBox24.Location = new Point(166, 72);
-			textBox24.Name = "textBox24";
-			textBox24.Size = new Size(89, 23);
-			textBox24.TabIndex = 3;
-			// 
-			// label25
-			// 
-			label25.AutoSize = true;
-			label25.Location = new Point(166, 54);
-			label25.Name = "label25";
-			label25.Size = new Size(18, 15);
-			label25.TabIndex = 4;
-			label25.Text = "ID";
+			button13.Location = new Point(257, 18);
+			button13.Name = "button13";
+			button13.Size = new Size(75, 23);
+			button13.TabIndex = 7;
+			button13.Text = "Odśwież";
+			button13.UseVisualStyleBackColor = true;
+			button13.Click += button13_Click;
 			// 
 			// Form1
 			// 
@@ -1159,14 +1399,22 @@ namespace Bazy
 			groupBox9.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
 			tabPage4.ResumeLayout(false);
+			groupBox11.ResumeLayout(false);
+			groupBox11.PerformLayout();
 			groupBox10.ResumeLayout(false);
 			groupBox10.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
 			tabPage5.ResumeLayout(false);
 			groupBox5.ResumeLayout(false);
 			groupBox5.PerformLayout();
-			groupBox11.ResumeLayout(false);
-			groupBox11.PerformLayout();
+			tabPage6.ResumeLayout(false);
+			groupBox12.ResumeLayout(false);
+			groupBox12.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+			tabPage7.ResumeLayout(false);
+			groupBox13.ResumeLayout(false);
+			groupBox13.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -1270,5 +1518,27 @@ namespace Bazy
 		private Label label23;
 		private TextBox textBox21;
 		private Label label22;
+		private TabPage tabPage6;
+		private GroupBox groupBox12;
+		private Label label26;
+		private DataGridView dataGridView5;
+		private TextBox textBox27;
+		private Label label28;
+		private Button button10;
+		private TextBox textBox26;
+		private TextBox textBox25;
+		private Label label27;
+		private TabPage tabPage7;
+		private GroupBox groupBox13;
+		private TextBox textBox29;
+		private TextBox textBox28;
+		private Label label30;
+		private Label label29;
+		private Button button11;
+		private DataGridView dataGridView6;
+		private TextBox textBox30;
+		private Label label31;
+		private Button button12;
+		private Button button13;
 	}
 }
