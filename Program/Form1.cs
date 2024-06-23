@@ -1,6 +1,11 @@
 using Npgsql;
 using System.Collections.Generic;
 using System.Data;
+using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Diagnostics.Eventing.Reader;
 using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
@@ -12,14 +17,14 @@ namespace Bazy
 
 //			- nale¿y zadbaæ o odpowiednie powi¹zania pomiêdzy tabelami oraz na³o¿yæ niezbêdne ograniczenia https://www.postgresql.org/docs/13/ddl-constraints.html
 //			+ powinna zawieraæ widok(VIEW);
-//			- powinna zawieraæ w³asnorêcznie zdefiniowan¹ funkcjê(FUNCTION);
-//			- powinna zawieraæ wyzwalacz(TRIGGER);
+//			+ powinna zawieraæ w³asnorêcznie zdefiniowan¹ funkcjê(FUNCTION);
+//			+ powinna zawieraæ wyzwalacz(TRIGGER);
 //			Do bazy danych nale¿y zaprojektowaæ interfejs(np.w PHP lub dowolny inny jêzyk), który pozwoli na:
 //			+ wyœwietlenie zawartoœci poszczególnych tabel(SELECT);
-//			- dodawanie, usuwanie i edycjê rekordów z wybranych tabel(INSERT, DELETE, UPDATE);
+//			+ dodawanie, usuwanie i edycjê rekordów z wybranych tabel(INSERT, DELETE, UPDATE);
 //			+ wyœwietlenie widoku;
-//			- wywo³anie funkcji;
-//			- uruchomienie wyzwalacza.
+//			+ wywo³anie funkcji;
+//			+ uruchomienie wyzwalacza.
 //			Nale¿y równie¿ zadbaæ o takie wype³nienie bazy danymi, ¿eby mo¿liwe by³o przeœledzenie jej dzia³ania.
 {
 	public partial class Form1 : Form
@@ -68,7 +73,7 @@ namespace Bazy
 				case "faktury":
 					this.command.Connection = connection;
 					this.command.CommandType = System.Data.CommandType.Text;
-					this.command.CommandText = "select data_wystawienia as \"Data wystawienia\", cena_razem_bez_podatku as \"Cena netto\", podatek as \"Podatek\", cena_razem as \"Cena razem\", klienci_nr_klienta as \"Numer klienta\" from " + table;
+					this.command.CommandText = "select data_wystawienia as \"Data wystawienia\", id_faktury as \"ID\", cena_razem_bez_podatku as \"Cena netto\", podatek as \"Podatek\", cena_razem as \"Cena razem\", klienci_nr_klienta as \"Numer klienta\" from " + table;
 					break;
 
 				case "adresy":
@@ -144,6 +149,29 @@ namespace Bazy
 			}
 		}
 
+		public void update_towary()
+		{
+			try
+			{
+				if (radioButton6.Checked)
+				{
+					this.command.CommandText = $"UPDATE towary SET opis_towaru = '{this.textBox10.Text}', cena_towaru = {this.textBox11.Text} WHERE id_towaru = {this.textBox9.Text}";
+					command.ExecuteNonQuery();
+				}
+				if (radioButton7.Checked)
+				{
+					this.command.CommandText = $"UPDATE towary SET opis_towaru = '{this.textBox10.Text}', cena_towaru = {this.textBox11.Text} WHERE opis_towaru = '{this.textBox9.Text}'";
+					command.ExecuteNonQuery();
+				}
+				this.command.CommandType = System.Data.CommandType.Text;
+
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
 		public void delete_klienci()
 		{
 			try
@@ -165,6 +193,119 @@ namespace Bazy
 					this.command.CommandText = $"DELETE FROM klienci WHERE nazwa_klienta = '{this.textBox6.Text}'";
 					command.ExecuteNonQuery();
 				}
+				this.command.CommandType = System.Data.CommandType.Text;
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void update_klienci()
+		{
+			try
+			{
+				if (radioButton8.Checked)
+				{
+					this.command.CommandText = $"UPDATE klienci SET nazwa_klienta = '{textBox14.Text}', NIP_klienta = '{textBox13.Text}' WHERE nr_klienta = {this.textBox12.Text}";
+					command.ExecuteNonQuery();
+				}
+
+				if (radioButton9.Checked)
+				{
+					this.command.CommandText = $"UPDATE klienci SET nazwa_klienta = '{textBox14.Text}', NIP_klienta = '{textBox13.Text}' WHERE NIP_klienta = '{this.textBox12.Text}'";
+					command.ExecuteNonQuery();
+				}
+
+				if (radioButton10.Checked)
+				{
+					this.command.CommandText = $"UPDATE klienci SET nazwa_klienta = '{textBox14.Text}', NIP_klienta = '{textBox13.Text}' WHERE nazwa_klienta = '{this.textBox12.Text}'";
+					command.ExecuteNonQuery();
+				}
+				this.command.CommandType = System.Data.CommandType.Text;
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void insert_faktury()
+		{
+			try
+			{
+				this.command.CommandType = System.Data.CommandType.Text;
+				this.command.CommandText = $"INSERT INTO faktury (data_wystawienia, cena_razem_bez_podatku, podatek, klienci_nr_klienta) VALUES ('{dateTimePicker1.Value.ToString("yyyy-MM-dd")}', {textBox16.Text}, {textBox17.Text}, {textBox18.Text})";
+				command.ExecuteNonQuery();
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void update_faktury()
+		{
+			try
+			{
+				this.command.CommandText = $"UPDATE faktury SET data_wystawienia = '{dateTimePicker1.Value.ToString("yyyy-MM-dd")}', cena_razem_bez_podatku = '{textBox16.Text}', podatek = {textBox17.Text}, klienci_nr_klienta = {textBox18.Text} WHERE id_faktury = {this.textBox15.Text}";
+				command.ExecuteNonQuery();
+				this.command.CommandType = System.Data.CommandType.Text;
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void delete_faktury()
+		{
+			try
+			{
+				this.command.CommandText = $"DELETE FROM faktury WHERE id_faktury = {this.textBox15.Text}";
+				command.ExecuteNonQuery();
+				this.command.CommandType = System.Data.CommandType.Text;
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void insert_adresy()
+		{
+			try
+			{
+				this.command.CommandType = System.Data.CommandType.Text;
+				this.command.CommandText = $"INSERT INTO adresy (ulica, nr_domu, nr_lokalu, kod_pocztowy, miasto) VALUES ('{textBox19.Text}', '{textBox20.Text}', '{textBox21.Text}', '{textBox22.Text}', '{textBox23.Text}')";
+				command.ExecuteNonQuery();
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void update_adresy()
+		{
+			try
+			{
+				this.command.CommandText = $"UPDATE adresy SET ulica = '{textBox19.Text}', nr_domu = '{textBox20.Text}', nr_lokalu = '{textBox21.Text}', kod_pocztowy = '{textBox22.Text}', miasto = '{textBox23.Text}' WHERE id_adresu = {textBox24.Text}";
+				command.ExecuteNonQuery();
+				this.command.CommandType = System.Data.CommandType.Text;
+			}
+			catch (Exception exc)
+			{
+				MessageBox.Show(exc.Message);
+			}
+		}
+
+		public void delete_adresy()
+		{
+			try
+			{
+				this.command.CommandText = $"DELETE FROM adresy WHERE id_adresu = {textBox24.Text}";
+				command.ExecuteNonQuery();
 				this.command.CommandType = System.Data.CommandType.Text;
 			}
 			catch (Exception exc)
@@ -245,6 +386,86 @@ namespace Bazy
 			delete_klienci();
 			update_table(dataGridView2, "klienci");
 			textBox6.Text = "";
+		}
+
+		private void label6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			this.command.CommandText = $"SELECT oblicz_powierzchnie({this.textBox7.Text}, {this.textBox8.Text})";
+			command.Parameters.Add(new NpgsqlParameter("p_out", DbType.String) { Direction = ParameterDirection.Output });
+			command.ExecuteNonQuery();
+			this.label8.Text = "Pole = " + Convert.ToString(command.Parameters[0].Value);
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			update_towary();
+			update_table(dataGridView1, "towary");
+			textBox9.Text = "";
+			textBox10.Text = "";
+			textBox11.Text = "";
+
+		}
+
+		private void radioButton5_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			update_klienci();
+			update_table(dataGridView2, "klienci");
+			textBox12.Text = "";
+			textBox13.Text = "";
+			textBox14.Text = "";
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			if (radioButton11.Checked)
+			{
+				insert_faktury();
+				update_table(dataGridView3, "faktury");
+			}
+			if (radioButton12.Checked)
+			{
+				update_faktury();
+				update_table(dataGridView3, "faktury");
+			}
+			if (radioButton13.Checked)
+			{
+				delete_faktury();
+				update_table(dataGridView3, "faktury");
+			}
+		}
+
+		private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button9_Click(object sender, EventArgs e)
+		{
+			if (radioButton14.Checked)
+			{
+				insert_adresy();
+				update_table(dataGridView4, "adresy");
+			}
+			if (radioButton15.Checked)
+			{
+				update_adresy();
+				update_table(dataGridView4, "adresy");
+			}
+			if (radioButton16.Checked)
+			{
+				delete_adresy();
+				update_table(dataGridView4, "adresy");
+			}
 		}
 	}
 }
