@@ -25,7 +25,7 @@ kod_pocztowy VARCHAR(6),
 miasto VARCHAR(30));
 
 CREATE TABLE faktura_towary(
-nr_faktury int REFERENCES faktury ON DELETE RESTRICT ON UPDATE RESTRICT,
+id_faktury int REFERENCES faktury ON DELETE RESTRICT ON UPDATE CASCADE,
 id_towaru INT REFERENCES towary ON DELETE RESTRICT ON UPDATE RESTRICT,
 ilosc_towaru INT,
 cena_laczna_towaru DECIMAL(9,2));
